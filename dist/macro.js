@@ -64,10 +64,6 @@ function syncVersion(_ref2) {
       );
     });
 
-  exportNodes.forEach(
-    (x) => (x.source.value = x.source.value.replace(/\.(m*)[tj]s(x*)$/, ""))
-  );
-
   var program = state.file.path;
   (_program$node$body = program.node.body).unshift.apply(
     _program$node$body,
