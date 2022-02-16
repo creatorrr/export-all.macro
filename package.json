@@ -1,0 +1,59 @@
+{
+    "homepage": "https://github.com/lifeiscontent/export-all.macro#readme",
+    "bugs": {
+        "url": "https://github.com/lifeiscontent/export-all.macro/issues"
+    },
+    "repository": {
+        "url": "https://github.com/lifeiscontent/export-all.macro.git",
+        "type": "git"
+    },
+    "eslintIgnore": [
+        "node_modules",
+        "coverage",
+        "dist"
+    ],
+    "eslintConfig": {
+        "rules": {
+            "complexity": [
+                "error",
+                12
+            ]
+        },
+        "extends": "./node_modules/kcd-scripts/eslint.js"
+    },
+    "devDependencies": {
+        "prettier": "^1.10.2",
+        "kcd-scripts": "^0.32.1",
+        "babel-plugin-tester": "^5.0.0",
+        "ast-pretty-print": "^2.0.1"
+    },
+    "dependencies": {
+        "glob": "^7.1.2",
+        "babel-plugin-macros": "^2.0.0"
+    },
+    "license": "MIT",
+    "author": "Aaron Reisman <aaron@lifeiscontent.net> (http://lifeiscontent.net/)",
+    "keywords": [
+        "babel-plugin-macros"
+    ],
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "precommit": "kcd-scripts precommit",
+        "validate": "kcd-scripts validate",
+        "test:update": "npm test -- --updateSnapshot --coverage",
+        "test": "kcd-scripts test",
+        "lint": "kcd-scripts lint",
+        "build": "kcd-scripts build",
+        "add-contributor": "kcd-scripts contributors add"
+    },
+    "engines": {
+        "npm": "> 3",
+        "node": "> 4"
+    },
+    "main": "dist/index.js",
+    "description": "A macro for babel-plugin-macros that allows you to export all files that match a glob",
+    "version": "0.0.0",
+    "name": "export-all.macro"
+}
